@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.sebivenlo</groupId>
+    <artifactId>sebitesthelpers</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <description>Fontys Venlo best maven practices. 
+        set of test helpers to easy the writing of non functional tests, such as visiblity, naughty code etc.
+    </description>
+
+    <developers>
+        <developer>
+            <id>hom</id>
+            <email>pieter.van.den.hombergh@gmail.com</email>
+            <name>Pieter van den Hombergh</name>
+            <timezone>2.0.0+</timezone>
+            <roles>
+                <role>main developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <url>https://sebivenlo.github.io/sebitesthelpers/</url>
+
+    <parent>
+        <groupId>io.github.jristretto</groupId>
+        <artifactId>testeasypom</artifactId>
+        <version>25.0.4</version>
+        <relativePath/>
+    </parent>
+    <dependencies>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <properties>
+        <java.release>11</java.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <trimStackTrace>true</trimStackTrace>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>examples/**.*</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
