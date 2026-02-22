@@ -5,8 +5,8 @@
     <artifactId>sebitesthelpers</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
-    <description>Fontys Venlo best maven practices. 
-        set of test helpers to easy the writing of non functional tests, such as visiblity, naughty code etc.
+    <description>Set of test helpers to ease the writing of non-functional tests, 
+        such as visiblity, naughty code etc.
     </description>
 
     <developers>
